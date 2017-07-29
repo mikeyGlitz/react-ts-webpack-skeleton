@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const maindir = path.resolve(__dirname, '../');
 const srcdir = path.resolve(maindir, 'src');
@@ -70,6 +70,9 @@ const config = {
     new webpack.NamedModulesPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.CommonsChunkPlugin({ name: ['app'] }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(env)
+    }),
     new ExtractTextPlugin({
       allChunks: true,
       filename: 'styles.css'
