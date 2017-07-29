@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "tslint-eslint-rules",
+    "tslint-config-standard",
+    "tslint-config-airbnb",
+    "tslint-react-recommended"
+  ],
+  "rules": {
+    "require-jsdoc": [true, {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": true,
+        "ClassDeclaration": true,
+        "ArrowFunctionExpression": true
+      }
+    }],
+    "valid-jsdoc": true,
+    "linebreak-style": false
+  }
+}

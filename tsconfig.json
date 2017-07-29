@@ -1,0 +1,21 @@
+{
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": [
+    "node_modules/**",
+    "coverage/**",
+    "docs/**",
+    "dist/**",
+    ".config/**",
+    "__tests__/**/*.test.ts",
+    "__tests__/**/*.test.tsx",
+    "__tests__/**/*.spec.ts",
+    "__tests__/**/*.spec.tsx"
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "sourceMap": true,
+    "noImplicitAny": true
+  }
+}

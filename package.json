@@ -1,0 +1,83 @@
+{
+  "name": "typescript-skeleton",
+  "version": "1.0.0",
+  "author": "Michael Glitzos <mglitzos@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config .config/webpack.config.js",
+    "devServer": "webpack-dev-server --config .config/webpack.config.js",
+    "docs": "gulp docs",
+    "test": "jest",
+    "lint": "tslint -c tslint.json src/**/*.ts src/**/*.tsx __tests__/**/*.ts __tests__/**/*.tsx"
+  },
+  "jest": {
+    "testRegex": "/__tests__/.*(\\.|/)(test|spec)\\.tsx?$",
+    "transform": {
+      "\\.tsx?": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleNameMapper": {
+      "\\.(css|png|jpe?g|tiff?|svg)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!**/dist/**",
+      "!coverage/**",
+      "!docs/**"
+    ],
+    "coverageDirectory": "coverage"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^2.8.4",
+    "@types/node": "^8.0.17",
+    "@types/prop-types": "^15.5.1",
+    "@types/react": "^15.6.0",
+    "@types/react-dom": "^15.5.1",
+    "@types/webpack-env": "^1.13.0",
+    "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
+    "exports-loader": "^0.6.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "gulp": "^3.9.1",
+    "gulp-typedoc": "^2.0.2",
+    "gulp-util": "^3.0.8",
+    "html-webpack-plugin": "^2.29.0",
+    "identity-obj-proxy": "^3.0.0",
+    "imagemin-webpack-plugin": "^1.5.0-beta.0",
+    "imports-loader": "^0.7.1",
+    "jest": "^20.0.4",
+    "postcss-loader": "^2.0.6",
+    "react-hot-loader": "3.0.0-beta.6",
+    "react-test-renderer": "^15.6.1",
+    "style-loader": "^0.18.2",
+    "ts-jest": "^20.0.7",
+    "ts-loader": "^2.3.2",
+    "tslint": "^5.5.0",
+    "tslint-config-airbnb": "^5.2.1",
+    "tslint-config-standard": "^6.0.1",
+    "tslint-react": "^3.1.0",
+    "tslint-react-recommended": "^1.0.9",
+    "typedoc": "^0.8.0",
+    "typescript": "^2.4.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1",
+    "webpack-env": "^0.8.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "regenerator-runtime": "^0.10.5",
+    "tslint-eslint-rules": "^4.1.1",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
