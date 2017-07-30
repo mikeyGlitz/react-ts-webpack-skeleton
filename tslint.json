@@ -6,14 +6,7 @@
     "tslint-react-recommended"
   ],
   "rules": {
-    "require-jsdoc": [true, {
-      "require": {
-        "FunctionDeclaration": true,
-        "MethodDefinition": true,
-        "ClassDeclaration": true,
-        "ArrowFunctionExpression": true
-      }
-    }],
+    "completed-docs": true,
     "valid-jsdoc": true,
     "linebreak-style": false
   }

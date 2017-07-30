@@ -8,7 +8,7 @@
     "devServer": "webpack-dev-server --config .config/webpack.config.js",
     "docs": "gulp docs",
     "test": "jest",
-    "lint": "tslint -c tslint.json src/**/*.ts src/**/*.tsx __tests__/**/*.ts __tests__/**/*.tsx"
+    "lint": "tslint -p tsconfig.json -c tslint.json src/**/*.ts src/**/*.tsx --type-check"
   },
   "jest": {
     "testRegex": "/__tests__/.*(\\.|/)(test|spec)\\.tsx?$",
